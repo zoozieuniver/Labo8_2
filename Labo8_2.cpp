@@ -27,7 +27,7 @@ int main() {
 
 		a.push_back(enter_value);
 		
-		//putting values into vectors
+	//putting values into vectors
 	if (a[i] < 0) {
 		sorted_numbers.negative.push_back(a[i]);
 		}
@@ -37,6 +37,21 @@ int main() {
 	else {
 		sorted_numbers.positive.push_back(a[i]);
 		}
+	}
+
+	//printing sorted line
+	printf("Sorted line is: ");
+
+	for (i = 0; i < sorted_numbers.negative.size(); i++) {
+		printf("%0.2f ", sorted_numbers.negative[i]);
+	}
+	
+	for (i = 0; i < sorted_numbers.positive.size(); i++) {
+		printf("%0.2f ", sorted_numbers.positive[i]);
+	}
+
+	for (i = 0; i < sorted_numbers.zero.size(); i++) {
+		printf("%0.2f ", sorted_numbers.zero[i]);
 	}
 
 	return 0;
