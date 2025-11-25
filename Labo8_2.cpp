@@ -1,22 +1,11 @@
 #define	_CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <vector>
 
 int main() {
 
-	int i, quantity;
-	float enter_value;
+	int i, quantity, a[10], count_negative = 0, count_zero = 0, count_positive = 0; // counters for sizes of massives;
+	float enter_value,negative[10], zero[10], positive[10]; // massives for sorting
 
-	std::vector <float> a;
-
-	//sort numbers into 3 vectors
-	struct SortElements {
-		std::vector <float> negative;
-		std::vector <float> zero;
-		std::vector <float> positive;
-	};
-
-	SortElements sorted_numbers;
 
 	printf("How many numbers massive needs? Enter amount: ");
 	scanf("%i", &quantity);
@@ -25,33 +14,36 @@ int main() {
 		printf("enter value of a[%i]=", i);
 		scanf("%f", &enter_value);
 
-		a.push_back(enter_value);
+		a[i]=enter_value;
 		
 	//putting values into vectors
 	if (a[i] < 0) {
-		sorted_numbers.negative.push_back(a[i]);
+		negative[count_negative]=a[i];
+		count_negative++;
 		}
 	else if (a[i] == 0) {
-		sorted_numbers.zero.push_back(a[i]);
+		zero[count_zero] = a[i];
+		count_zero++;
 		}
 	else {
-		sorted_numbers.positive.push_back(a[i]);
+		positive[count_positive] = a[i];
+		count_positive++;
 		}
 	}
 
 	//printing sorted line
 	printf("Sorted line is: ");
 
-	for (i = 0; i < sorted_numbers.negative.size(); i++) {
-		printf("%0.2f ", sorted_numbers.negative[i]);
+	for (i = 0; i < count_negative; i++) {
+		printf("%0.2f ", negative[i]);
 	}
 	
-	for (i = 0; i < sorted_numbers.positive.size(); i++) {
-		printf("%0.2f ", sorted_numbers.positive[i]);
+	for (i = 0; i < count_positive; i++) {
+		printf("%0.2f ", positive[i]);
 	}
 
-	for (i = 0; i < sorted_numbers.zero.size(); i++) {
-		printf("%0.2f ", sorted_numbers.zero[i]);
+	for (i = 0; i < count_zero; i++) {
+		printf("%0.2f ", zero[i]);
 	}
 
 	return 0;

@@ -1,2 +1,6 @@
 ﻿  Labo8_2.cpp
+D:\Programming\Labo8_2\Labo8_2\Labo8_2.cpp(17,8): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Programming\Labo8_2\Labo8_2\Labo8_2.cpp(21,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\Labo8_2\Labo8_2\Labo8_2.cpp(25,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Programming\Labo8_2\Labo8_2\Labo8_2.cpp(29,33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Labo8_2.vcxproj -> D:\Programming\Labo8_2\x64\Debug\Labo8_2.exe
